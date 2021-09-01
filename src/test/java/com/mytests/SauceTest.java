@@ -1,5 +1,7 @@
 package com.mytests;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -20,8 +22,11 @@ public class SauceTest extends BaseTest
 	}
 
 	@Test(priority = 2)
-	public void checkAddToCartButtonTest() {
+	public void checkAddToCartButtonTest() 
+	
+	{
 		doLogin();
-		Assert.assertTrue(driver.findElements(By.xpath("//button[text()='ADD TO CART']")).size() == 6);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		Assert.assertTrue(driver.findElements(By.xpath("//button[text()='Add to cart']")).size() == 6);
 	}
 }

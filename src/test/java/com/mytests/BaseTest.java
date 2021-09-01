@@ -28,7 +28,6 @@ public class BaseTest
 		
 		MutableCapabilities sauceOpts=new MutableCapabilities();
 		sauceOpts.setCapability("name", methodName);
-		//DesiredCapabilities caps=new DesiredCapabilities();
 		sauceOpts.setCapability("build", "Java-W3C-Examples");
 		sauceOpts.setCapability("seleniumVersion", "3.141.59");
 		sauceOpts.setCapability("username", "oauth-haritha.manikonda-8aa1c");
