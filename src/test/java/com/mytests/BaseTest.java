@@ -30,8 +30,8 @@ public class BaseTest
 		sauceOpts.setCapability("name", methodName);
 		sauceOpts.setCapability("build", "Java-W3C-Examples");
 		sauceOpts.setCapability("seleniumVersion", "3.141.59");
-		//sauceOpts.setCapability("username", "username");
-		//sauceOpts.setCapability("accessKey", "password");
+		sauceOpts.setCapability("username", "oauth-haritha.manikonda-8aa1c");
+		sauceOpts.setCapability("accessKey", "fea14705-5cac-49f3-a53f-2af72151cafc");
 		sauceOpts.setCapability("tags", "w3c-chrome-tests");	
 
 		//ChromeOptions cap=new ChromeOptions();
