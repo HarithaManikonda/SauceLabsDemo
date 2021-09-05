@@ -39,6 +39,7 @@ public class BaseTest
 		cap.setCapability("sauce:options", sauceOpts);
 		cap.setCapability("browserVersion", versionName);
 		cap.setCapability("platformName",platformName);
+		cap.setCapability("tags","TESTAUTO-1");
 
 		if(browserName.equals("chrome"))
 		{
