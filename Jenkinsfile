@@ -25,6 +25,10 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'mvn test' 
+                step([$class: 'Publisher', 
+                      testResults: 'target/surefire-reports/*.xml',
+                      testDataPublisher:[[$class:'SauceOnDemandReportPublisher']]
+                     ])
             }
         }
         stage('Deploy') {
