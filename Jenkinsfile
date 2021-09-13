@@ -28,7 +28,7 @@ pipeline {
                 saucePublisher()
                 step([$class: 'JUnitResultArchiver', 
                       testResults: 'target/surefire-reports/*.xml',
-                      testDataPublisher:[[$class:'SauceOnDemandReportPublisher']]
+                      testDataPublishers:[[$class:'SauceOnDemandReportPublisher']]
                      ])
                 
             }
