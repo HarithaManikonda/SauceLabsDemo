@@ -28,7 +28,7 @@ public class BaseTest
 		
 		MutableCapabilities sauceOpts=new MutableCapabilities();
 		sauceOpts.setCapability("name", methodName);
-		sauceOpts.setCapability("build", "Java-W3C-Examples");
+		sauceOpts.setCapability("build",System.getenv("JENKINS_BUILD_NUMBER"));
 		sauceOpts.setCapability("seleniumVersion", "3.141.59");
 		sauceOpts.setCapability("username", System.getenv("SAUCE_USERNAME"));
 		sauceOpts.setCapability("accessKey", System.getenv("SAUCE_ACCESS_KEY"));
